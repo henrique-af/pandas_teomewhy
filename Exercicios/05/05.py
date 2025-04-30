@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 #%%
 
-df_clientes = pd.read_csv("../../data/clientes.csv")
+df_clientes = pd.read_csv("../data/clientes.csv")
 df_clientes.head()
 
 #%%
@@ -29,8 +29,7 @@ df_clientes.head()
 df_clientes.loc[df_clientes["qtdePontos"].idxmax(), "idCliente"], df_clientes.loc[df_clientes["qtdePontos"].idxmin(), "idCliente"]
 
 #%%
-
-#05.05 - Selecione a primeira transação diária de cada cliente.
+# 05.05 - Selecione a primeira transação diária de cada cliente.
 
 transacoes = pd.read_csv("../../data/transacoes.csv")
 transacoes.head()
@@ -44,4 +43,3 @@ first = transacoes.drop_duplicates(keep="first", subset=["idCliente", "data"])
 last = transacoes.drop_duplicates(keep="last", subset=["idCliente", "data"])
 
 pd.concat([last, first])
-# %%

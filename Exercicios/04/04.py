@@ -4,7 +4,7 @@ import pandas as pd
 
 # %%
 
-df_clientes = pd.read_csv("../../data/clientes.csv")
+df_clientes = pd.read_csv("../data/clientes.csv")
 
 
 # %%
@@ -26,7 +26,7 @@ print(count)
 
 # 04.03 - Quantas transações ocorreram no dia 2025-02-01?
 
-df_transacoes = pd.read_csv("../../data/transacoes.csv")
+df_transacoes = pd.read_csv("../data/transacoes.csv")
 df_transacoes['dtCriacao'] = pd.to_datetime(df_transacoes['dtCriacao'])
 
 count = df_transacoes[

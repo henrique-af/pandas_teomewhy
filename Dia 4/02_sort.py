@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-clientes = pd.read_csv("../../data/clientes.csv")
+clientes = pd.read_csv("../data/clientes.csv")
 
 max_ponto = clientes["qtdePontos"].max()
 filtro = clientes["qtdePontos"] == max_ponto
